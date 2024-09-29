@@ -21,14 +21,24 @@ import org.verse.lee.c1.ListNode;
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * int val;
+ * ListNode next;
+ * ListNode() {}
+ * ListNode(int val) { this.val = val; }
+ * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-public  class Solution {
+public class Solution {
+    public static void main(String[] args) {
+
+        Solution solution = new Solution();
+        ListNode listNode = new ListNode(1, new ListNode(2, new ListNode(3, null)));
+        ListNode listNode1 = new ListNode(1, new ListNode(2, new ListNode(3, null)));
+
+        ListNode per = solution.addTwoNumbers(listNode, listNode1);
+        System.out.println(per);
+    }
+
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         //定义一个新联表伪指针，用来指向头指针，返回结果
         ListNode prev = new ListNode(0);
@@ -71,18 +81,4 @@ public  class Solution {
         //返回链表的头节点
         return prev.next;
     }
-    
-    public static void main(String[] args) {
-    
-        Solution solution = new Solution();
-        ListNode listNode=new ListNode(1,new ListNode(2,new ListNode(3,null)));
-         ListNode listNode1=new ListNode(1,new ListNode(2,new ListNode(3,null)));
-        
-       ListNode per=  solution.addTwoNumbers(listNode, listNode1);
-        System.out.println(per);
-    
-    
-    }
-    
-    
 }
